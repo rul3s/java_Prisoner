@@ -17,4 +17,8 @@ public class UtilityMatrix {
         matrix[0][1] = new Result(0,-3);
         matrix[0][0] = new Result(-2,-2);
     }
+
+    public Result getResult(int a, int b){
+        return matrix[a][b];
+    }
 }

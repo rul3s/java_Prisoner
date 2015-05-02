@@ -11,5 +11,5 @@ public class StratXula implements Strategy {
 
     private StratXula(){};
 
-    public boolean getAction(){return false;}
+    public boolean getAction(PlayerStrategy pStrat){return false;}
 }

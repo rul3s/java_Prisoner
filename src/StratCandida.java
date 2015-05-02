@@ -9,5 +9,5 @@ public class StratCandida implements Strategy {
         return instance;
     }
 
-    public boolean getAction(){return true;}
+    public boolean getAction(PlayerStrategy pStrat){return true;}
 }

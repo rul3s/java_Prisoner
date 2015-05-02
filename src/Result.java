@@ -19,5 +19,5 @@ public class Result {
 
     public int getAyears(){return a;}
 
-    public int getByears(){return a;}
+    public int getByears(){return b;}
 }

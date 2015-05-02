@@ -11,7 +11,7 @@ public class StratIntelligent implements Strategy {
         return instance;
     }
 
-    public boolean getAction(){
+    public boolean getAction(PlayerStrategy pStrat){
         Random random = new Random();
         return random.nextBoolean();
     }

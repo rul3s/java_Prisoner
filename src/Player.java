@@ -6,7 +6,7 @@ public class Player {
     private PlayerStrategy playerStrategy;
 
     public Player(String name, String strategy){
-        System.out.print("Creating player " +name +"...");
+        System.out.print("Creating player " +name +" with strategy " +strategy +"...");
         this.name = name;
         this.playerStrategy = new PlayerStrategy(strategy);
         System.out.println("done!");

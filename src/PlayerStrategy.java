@@ -9,6 +9,6 @@ public class PlayerStrategy {
     }
 
     public boolean getAction(){
-        return strategy.getAction();
+        return strategy.getAction(this);
     }
 }
