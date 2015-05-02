@@ -3,10 +3,13 @@
  */
 public class Player {
     private String name;
-    private PlayerStrategy strategy;
+    private PlayerStrategy playerStrategy;
 
     public Player(String name, String strategy){
         this.name = name;
-        this.strategy = new PlayerStrategy(strategy);
+        this.playerStrategy = new PlayerStrategy(strategy);
     }
+
+    public String getName(){return name;}
+    public PlayerStrategy getPlayerStrategy(){return playerStrategy;}
 }

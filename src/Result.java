@@ -3,29 +3,21 @@
  */
 public class Result {
     /*
-    T = Recompensa per desertar quan l'altre cooperi
+    Discounted years to First Player
      */
-    private int T;
+    private int a;
 
     /*
-    R = La recompensa per la col·laboració mútua.
+    Discounted years to Second Player
      */
-    private int R;
+    private int b;
 
-    /*
-    La recompensa per la deserció mútua
-     */
-    private int P;
-
-    /*
-    La recompensa per fer el primo i cooperar quan l'altre deserta.
-     */
-    private int S;
-
-    public Result(int T, int R, int P, int S){
-        this.T = T;
-        this.R = R;
-        this.P = P;
-        this.S = S;
+    public Result(int a, int b){
+        this.a = a;
+        this.b = b;
     }
+
+    public int getAyears(){return a;}
+
+    public int getByears(){return a;}
 }
