@@ -1,0 +1,5 @@
+/**
+ * Created by Raul on 03/05/2015.
+ */
+public class Stratergy {
+}

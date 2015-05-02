@@ -22,7 +22,6 @@ public class Play {
     }
 
     public void startGame(){
-        System.out.println("Game initialized, player " +playerA.getName())
-        ;
+        System.out.println("Game started");
     }
 }
