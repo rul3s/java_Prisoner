@@ -1,5 +1,3 @@
-import java.util.Random;
-
 /**
  * Created by Raul on 02/05/2015.
  */
@@ -22,7 +20,7 @@ public class Register {
         intellJ = StratIntelligent.getInstance();
     }
 
-    public Stratergy getStratergy(String strat){
+    public Strategy getStratergy(String strat){
         switch (strat){
             case "xula":
                 return xula;

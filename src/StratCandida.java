@@ -1,7 +1,7 @@
 /**
  * Created by Raul on 03/05/2015.
  */
-public class StratCandida extends Stratergy{
+public class StratCandida implements Strategy {
     private static StratCandida instance;
 
     public static StratCandida getInstance(){

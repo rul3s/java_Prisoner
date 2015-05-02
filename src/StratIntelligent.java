@@ -3,7 +3,7 @@ import java.util.Random;
 /**
  * Created by Raul on 03/05/2015.
  */
-public class StratIntelligent extends Stratergy{
+public class StratIntelligent implements Strategy {
     private static StratIntelligent instance;
 
     public static StratIntelligent getInstance(){
