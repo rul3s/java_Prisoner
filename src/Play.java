@@ -28,17 +28,17 @@ public class Play {
 
         System.out.println("Game started");
         for(int i=0;i<rounds;i++){
-            if(playerA.getPlayerStrategy().getAction())actionA = 1;
+            if(playerA.getpStrategy().getAction())actionA = 1;
             else actionA = 0;
-            if(playerB.getPlayerStrategy().getAction())actionB = 1;
+            if(playerB.getpStrategy().getAction())actionB = 1;
             else actionB = 0;
 
             System.out.print(actionA +" " +actionB +" // ");
             res = uMatrix.getResult(actionA,actionB);
             System.out.println(res.getAyears() +" " +res.getByears());
 
-            aYears += 3-res.getAyears();
-            bYears += 3-res.getByears();
+            aYears += 3+res.getAyears();
+            bYears += 3+res.getByears();
         }
         System.out.println("Game finished, results:");
         System.out.println("Player A, years = " +aYears);

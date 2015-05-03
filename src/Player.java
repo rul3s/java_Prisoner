@@ -3,17 +3,17 @@
  */
 public class Player {
     private String name;
-    private PlayerStrategy playerStrategy;
+    private PlayerStrategy pStrategy;
 
     public Player(String name, String strategy){
         System.out.print("Creating player " +name +" with strategy " +strategy +"...");
         this.name = name;
-        this.playerStrategy = new PlayerStrategy(strategy);
+        this.pStrategy = Register.getInstance().getStrategyCopy(strategy);
         System.out.println("done!");
     }
 
-    private void notifyStrategy(boolean rivalAction){
-
+    private void notifyResult(boolean rivalAction){
+        pStrategy.addResult(rivalAction);
     }
 
     /*
@@ -21,10 +21,15 @@ public class Player {
     action false = shut up
      */
     private boolean action(){
-        boolean action = playerStrategy.getAction();
+        boolean action = pStrategy.getAction();
         return true;
     }
 
-    public String getName(){return name;}
-    public PlayerStrategy getPlayerStrategy(){return playerStrategy;}
+    public String getName(){
+        return name;
+    }
+
+    public PlayerStrategy getStrategy(){
+        return pStrategy;
+    }
 }

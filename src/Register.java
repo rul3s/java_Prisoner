@@ -3,10 +3,10 @@
  */
 public class Register {
     private static Register instance;
-    StratXula xula;
-    StratCandida candida;
-    StratRandom random;
-    StratIntelligent intellJ;
+    Xula xula;
+    Candida candida;
+    Random random;
+    IntelliJ intellJ;
 
     public static Register getInstance(){
         if(instance==null) instance = new Register();
@@ -14,13 +14,13 @@ public class Register {
     }
 
     private Register(){
-        xula = StratXula.getInstance();
-        candida = StratCandida.getInstance();
-        random = StratRandom.getInstance();
-        intellJ = StratIntelligent.getInstance();
+        xula = Xula.getInstance();
+        candida = Candida.getInstance();
+        random = Random.getInstance();
+        intellJ = IntelliJ.getInstance();
     }
 
-    public Strategy getStratergy(String strat){
+    public PlayerStrategy getStrategyCopy(String strat){
         switch (strat){
             case "xula":
                 return xula;

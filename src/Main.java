@@ -8,7 +8,7 @@ public class Main {
         String stratA, stratB;
 
         stratA = "xula";
-        stratB = "candida";
+        stratB = "random";
 
         Play play = new Play(stratA,stratB);
         play.startGame();
