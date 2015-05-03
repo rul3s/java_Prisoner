@@ -22,8 +22,8 @@ public class IntelliJ implements PlayerStrategy {
         return (calcCooperationPerc(results)>=0.10 && results.size()>5);
     }
 
-    /*
-    Calculates the percentage of cooperations with policemen by the other player
+    /**
+     *Calculates the percentage of cooperations with policemen by the other player
      */
     private float calcCooperationPerc(ArrayList<Boolean> results){
         numCooperations = 0;

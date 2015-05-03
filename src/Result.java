@@ -26,4 +26,8 @@ public class Result {
     public int getByears(){
         return b;
     }
+
+    public boolean equals(Result r){
+        return (r.getAyears() == this.a && r.getByears() == this.b);
+    }
 }

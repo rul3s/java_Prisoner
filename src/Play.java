@@ -51,4 +51,12 @@ public class Play {
         System.out.println("Player A, years = " +aYears);
         System.out.println("Player B, years = " +bYears);
     }
+
+    public int getaYears(){
+        return aYears;
+    }
+
+    public int getbYears(){
+        return bYears;
+    }
 }
