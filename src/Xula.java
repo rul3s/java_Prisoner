@@ -4,14 +4,10 @@ import java.util.ArrayList;
  * Created by Raul on 03/05/2015.
  */
 public class Xula implements PlayerStrategy {
-    private static Xula instance;
-    ArrayList<Boolean> results = new ArrayList<Boolean>();
+    ArrayList<Boolean> results;
 
-    private Xula(){};
-
-    public static Xula getInstance(){
-        if (instance == null) instance = new Xula();
-        return instance;
+    public Xula(){
+        results = new ArrayList<Boolean>();
     }
 
     public void addResult(boolean lastResult){

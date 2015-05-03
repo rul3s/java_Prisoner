@@ -5,14 +5,10 @@ import java.util.Random;
  * Created by Raul on 03/05/2015.
  */
 public class IntelliJ implements PlayerStrategy {
-    private static IntelliJ instance;
-    ArrayList<Boolean> results = new ArrayList<Boolean>();
+    ArrayList<Boolean> results;
 
-    private IntelliJ(){}
-
-    public static IntelliJ getInstance(){
-        if (instance == null) instance = new IntelliJ();
-        return instance;
+    public IntelliJ(){
+        results = new ArrayList<Boolean>();
     }
 
     public void addResult(boolean lastResult){
