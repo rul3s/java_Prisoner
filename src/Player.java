@@ -8,12 +8,29 @@ public class Player {
     public Player(String name, String strategy){
         System.out.print("Creating player " +name +" with strategy " +strategy +"...");
         this.name = name;
-        this.pStrategy = Register.getInstance().getStrategyCopy(strategy);
-        System.out.println("done!");
-    }
 
-    private void notifyResult(boolean rivalAction){
-        pStrategy.addResult(rivalAction);
+        switch (strategy){
+            case "xula":
+                System.out.print(",Strategy xula assigned...");
+                pStrategy = new Xula();
+                break;
+            case "candida":
+                System.out.print(",Strategy candida assigned...");
+                pStrategy = new Candida();
+                break;
+            case "random":
+                System.out.print(",Strategy random assigned...");
+                pStrategy = new Random();
+                break;
+            default:
+                System.out.print(",Strategy intellij assigned...");
+                pStrategy = new IntelliJ();
+                break;
+        }
+
+        //this.pStrategy = new Candida();
+        //this.pStrategy = Register.getInstance().getStrategyCopy(strategy);
+        System.out.println("done!");
     }
 
     /*
@@ -23,6 +40,10 @@ public class Player {
     private boolean action(){
         boolean action = pStrategy.getAction();
         return true;
+    }
+
+    public void notifyResult(boolean rivalAction){
+        pStrategy.addResult(rivalAction);
     }
 
     public String getName(){

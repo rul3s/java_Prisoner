@@ -23,15 +23,20 @@ public class Play {
     }
 
     public void startGame(){
-        int actionA;
-        int actionB;
+        int actionA, actionB;
+        boolean cooperateA, cooperateB;
         Result res;
 
         System.out.println("Game started");
         for(int i=0;i<rounds;i++){
-            if(playerA.getStrategy().getAction())actionA = 1;
+            cooperateA = playerA.getStrategy().getAction();
+            cooperateB = playerB.getStrategy().getAction();
+
+            System.out.println("Round " +i +", player A cooperate = " +cooperateA +", player B cooperate = " +cooperateB);
+
+            if(cooperateA)actionA = 1;
             else actionA = 0;
-            if(playerB.getStrategy().getAction())actionB = 1;
+            if(cooperateB)actionB = 1;
             else actionB = 0;
 
             System.out.print(actionA +" " +actionB +" // ");
@@ -40,6 +45,9 @@ public class Play {
 
             aYears += 3+res.getAyears();
             bYears += 3+res.getByears();
+
+            playerA.notifyResult(cooperateB);
+            playerB.notifyResult(cooperateA);
         }
         System.out.println("Game finished, results:");
         System.out.println("Player A, years = " +aYears);

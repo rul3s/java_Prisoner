@@ -7,8 +7,8 @@ public class Main {
         System.out.println("Prisoner 0.1 started");
         String stratA, stratB;
 
-        stratA = "xula";
-        stratB = "random";
+        stratA = "random";
+        stratB = "intellij";
 
         Play play = new Play(stratA,stratB);
         play.startGame();
