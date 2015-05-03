@@ -1,7 +1,4 @@
-import com.sun.org.apache.xalan.internal.xsltc.dom.ArrayNodeListIterator;
-
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.ListIterator;
 import java.util.Random;
 
@@ -10,29 +7,25 @@ import java.util.Random;
  * IntelliJ strategy behaviour
  */
 public class IntelliJ implements PlayerStrategy {
-    private ArrayList<Boolean> results;
+    private String name = "IntelliJ";
     private ListIterator<Boolean> resIt;
     private float numCooperations;
 
-    public IntelliJ(){
-        results = new ArrayList<>();
+    public IntelliJ(){}
+
+    public PlayerStrategy deepCopy(){
+        return new IntelliJ();
     }
 
-    public void addResult(boolean lastResult){
-        results.add(lastResult);
-    }
-
-    public Object clone() throws CloneNotSupportedException{
-        return super.clone();
-    }
-
-    public boolean getAction(){
+    public boolean getAction(ArrayList<Boolean> results) {
         Random random = new Random();
-        if(calcCooperationPerc()>=0.10 && results.size()>10)return true;
-        else return false;
+        return (calcCooperationPerc(results)>=0.10 && results.size()>5);
     }
 
-    private float calcCooperationPerc(){
+    /*
+    Calculates the percentage of cooperations with policemen by the other player
+     */
+    private float calcCooperationPerc(ArrayList<Boolean> results){
         numCooperations = 0;
         resIt = results.listIterator();
 
@@ -41,5 +34,13 @@ public class IntelliJ implements PlayerStrategy {
         }
 
         return (numCooperations/results.size());
+    }
+
+    public int getStrategiesCount(){
+        return 1;
+    }
+
+    public String getName(){
+        return name;
     }
 }

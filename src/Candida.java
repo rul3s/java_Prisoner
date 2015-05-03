@@ -5,21 +5,23 @@ import java.util.ArrayList;
  * Candida strategy behaviour
  */
 public class Candida implements PlayerStrategy {
-    private ArrayList<Boolean> results;
+    private String name = "Candida";
 
-    public Candida(){
-        results = new ArrayList<>();
+    public Candida(){}
+
+    public PlayerStrategy deepCopy(){
+        return new Candida();
     }
 
-    public void addResult(boolean lastResult){
-        results.add(lastResult);
-    }
-
-    public Object clone() throws CloneNotSupportedException{
-        return super.clone();
-    }
-
-    public boolean getAction(){
+    public boolean getAction(ArrayList<Boolean> results){
         return true;
+    }
+
+    public int getStrategiesCount(){
+        return 1;
+    }
+
+    public String getName(){
+        return name;
     }
 }

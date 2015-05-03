@@ -6,9 +6,18 @@ import java.util.ListIterator;
  * Interface for all strategies aplied by players
  */
 public interface PlayerStrategy {
-    ArrayList<Boolean> results = null;
-    ListIterator<Boolean> resIt = null;
-    boolean getAction();
-    void addResult(boolean lastResult);
-    Object clone() throws CloneNotSupportedException;
+    /*
+    Deep copy of the Strategy
+     */
+    PlayerStrategy deepCopy();
+    /*
+    Action to be performed
+     */
+    boolean getAction(ArrayList<Boolean> results);
+    /*
+    Get number of leafs in this tree
+     */
+    int getStrategiesCount();
+    String getName();
+    String name = null;
 }

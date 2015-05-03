@@ -1,7 +1,9 @@
 /**
  * Created by Raul on 02/05/2015.
+ * Needed to return the result of a certain combination
  */
 public class Result {
+
     /*
     Discounted years to First Player
      */
@@ -17,7 +19,11 @@ public class Result {
         this.b = b;
     }
 
-    public int getAyears(){return a;}
+    public int getAyears(){
+        return a;
+    }
 
-    public int getByears(){return b;}
+    public int getByears(){
+        return b;
+    }
 }

@@ -5,21 +5,22 @@ import java.util.ArrayList;
  * Xula strategy behaviour
  */
 public class Xula implements PlayerStrategy {
-    private ArrayList<Boolean> results;
+    private String name = "Xula";
+    public Xula(){}
 
-    public Xula(){
-        results = new ArrayList<>();
+    public PlayerStrategy deepCopy(){
+        return new Xula();
     }
 
-    public void addResult(boolean lastResult){
-        results.add(lastResult);
-    }
-
-    public Object clone() throws CloneNotSupportedException{
-        return super.clone();
-    }
-
-    public boolean getAction(){
+    public boolean getAction(ArrayList<Boolean> results){
         return false;
+    }
+
+    public int getStrategiesCount(){
+        return 1;
+    }
+
+    public String getName(){
+        return name;
     }
 }

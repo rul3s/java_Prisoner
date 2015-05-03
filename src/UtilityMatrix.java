@@ -1,5 +1,6 @@
 /**
  * Created by Raul on 02/05/2015.
+ * Utility Matrix to calculate costs in years
  */
 public class UtilityMatrix {
     /*
@@ -10,6 +11,8 @@ public class UtilityMatrix {
 
     /*
     Initialize matrix according to enunciate and with both rules
+    1 = cooperate
+    0 = no cooperate
      */
     public UtilityMatrix(){
         matrix[1][1] = new Result(-1,-1);
