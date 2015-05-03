@@ -30,6 +30,10 @@ public class Player {
         results.add(rivalAction);
     }
 
+    public boolean getLastResult(){
+        return results.get(results.size()-1);
+    }
+
     public String getName(){
         return name;
     }

@@ -54,6 +54,7 @@ public class BestOf implements PlayerStrategy, Serializable{
         for(PlayerStrategy ps : strategies){
             count += ps.getStrategiesCount();
         }
+
         return count;
     }
 
@@ -62,6 +63,10 @@ public class BestOf implements PlayerStrategy, Serializable{
      */
     public void addSimpleStrategy(PlayerStrategy strat){
         strategies.add(strat);
+    }
+
+    public ArrayList<PlayerStrategy> getStrategies(){
+        return strategies;
     }
 
     public String getName(){
