@@ -20,8 +20,7 @@ public class Register {
     }
 
     /*
-    It not specified which strategies will implement the BestOf will take "xula" and "intelliJ" by default, else will
-    use second constructor and read them
+    By default bestOf will be created whith candida, xula and random
      */
     private Register(){
         xula = new Xula();
@@ -29,8 +28,9 @@ public class Register {
         random = new Random();
         intelliJ = new IntelliJ();
         bestOf = new BestOf();
+        bestOf.addSimpleStrategy(candida);
         bestOf.addSimpleStrategy(xula);
-        bestOf.addSimpleStrategy(intelliJ);
+        bestOf.addSimpleStrategy(random);
     }
 
     public PlayerStrategy getStrategyCopy(String strat){
@@ -42,8 +42,8 @@ public class Register {
                     return candida.deepCopy();
                 case "random":
                     return random.deepCopy();
-                case "bestOf":
-                    return bestOf.deepCopy();
+                case "bestof":
+                    return bestOf;
                 default:
                     return intelliJ.deepCopy();
             }

@@ -40,8 +40,8 @@ public class BestOf implements PlayerStrategy, Serializable{
             indResults.add(ps.getAction(results));
         }
 
-        while(itIndRes.hasNext()){
-            if(itIndRes.next()) coop++;
+        for(boolean bol : indResults){
+            if (bol) coop++;
             else noCoop++;
         }
 
