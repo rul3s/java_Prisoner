@@ -2,20 +2,21 @@ import java.util.ArrayList;
 
 /**
  * Created by Raul on 03/05/2015.
+ * Xula strategy behaviour
  */
 public class Xula implements PlayerStrategy {
-    ArrayList<Boolean> results;
+    private ArrayList<Boolean> results;
 
     public Xula(){
-        results = new ArrayList<Boolean>();
+        results = new ArrayList<>();
     }
 
     public void addResult(boolean lastResult){
         results.add(lastResult);
     }
 
-    public Xula clone(){
-        return this.clone();
+    public Object clone() throws CloneNotSupportedException{
+        return super.clone();
     }
 
     public boolean getAction(){

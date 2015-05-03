@@ -1,5 +1,6 @@
 /**
  * Created by Raul on 02/05/2015.
+ * To init a game
  */
 public class Play {
     private int aYears, bYears, rounds;
@@ -28,9 +29,9 @@ public class Play {
 
         System.out.println("Game started");
         for(int i=0;i<rounds;i++){
-            if(playerA.getpStrategy().getAction())actionA = 1;
+            if(playerA.getStrategy().getAction())actionA = 1;
             else actionA = 0;
-            if(playerB.getpStrategy().getAction())actionB = 1;
+            if(playerB.getStrategy().getAction())actionB = 1;
             else actionB = 0;
 
             System.out.print(actionA +" " +actionB +" // ");

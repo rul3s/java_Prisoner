@@ -1,5 +1,7 @@
 /**
  * Created by Raul on 02/05/2015.
+ * Singleton Class, just one instance of register.
+ * This class knows all strategies and return copies of them to players
  */
 public class Register {
     private static Register instance;
@@ -14,22 +16,26 @@ public class Register {
     }
 
     private Register(){
-        xula = Xula.getInstance();
-        candida = Candida.getInstance();
-        random = Random.getInstance();
-        intellJ = IntelliJ.getInstance();
+        xula = new Xula();
+        candida = new Candida();
+        random = new Random();
+        intellJ = new IntelliJ();
     }
 
     public PlayerStrategy getStrategyCopy(String strat){
-        switch (strat){
-            case "xula":
-                return xula.clone();
-            case "candida":
-                return candida.clone();
-            case "random":
-                return random.clone();
-            default:
-                return intellJ.clone();
+        try{
+            switch (strat){
+                case "xula":
+                    return (Xula) xula.clone();
+                case "candida":
+                    return (Candida) candida.clone();
+                case "random":
+                    return (Random) random.clone();
+                default:
+                    return (IntelliJ) intellJ.clone();
+            }
+        }catch (Exception e){
+            return new Random();
         }
     }
 }

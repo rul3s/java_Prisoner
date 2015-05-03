@@ -2,20 +2,21 @@ import java.util.ArrayList;
 
 /**
  * Created by Raul on 03/05/2015.
+ * Random strategy behaviour
  */
 public class Random implements PlayerStrategy {
-    ArrayList<Boolean> results;
+    private ArrayList<Boolean> results;
     
     public Random(){
-        results = new ArrayList<Boolean>();
+        results = new ArrayList<>();
     }
 
     public void addResult(boolean lastResult){
         results.add(lastResult);
     }
 
-    public Random clone(){
-        return this.clone();
+    public Object clone() throws CloneNotSupportedException{
+        return super.clone();
     }
 
     public boolean getAction(){
