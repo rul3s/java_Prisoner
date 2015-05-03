@@ -19,6 +19,10 @@ public class IntelliJ implements PlayerStrategy {
         results.add(lastResult);
     }
 
+    public IntelliJ clone(){
+        return this.clone();
+    }
+
     public boolean getAction(){
         Random random = new Random();
         return random.nextBoolean();

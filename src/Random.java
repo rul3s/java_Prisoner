@@ -7,7 +7,7 @@ public class Random implements PlayerStrategy {
     private static Random instance;
     ArrayList<Boolean> results = new ArrayList<Boolean>();
     
-    private Random(){}
+    public Random(){}
 
     public static Random getInstance(){
         if (instance == null) instance = new Random();
@@ -16,6 +16,10 @@ public class Random implements PlayerStrategy {
 
     public void addResult(boolean lastResult){
         results.add(lastResult);
+    }
+
+    public Random clone(){
+        return this.clone();
     }
 
     public boolean getAction(){

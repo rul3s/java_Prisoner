@@ -16,5 +16,9 @@ public class Candida implements PlayerStrategy {
         results.add(lastResult);
     }
 
+    public Candida clone(){
+        return this.clone();
+    }
+
     public boolean getAction(){return true;}
 }

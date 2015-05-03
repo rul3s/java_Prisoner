@@ -18,5 +18,11 @@ public class Xula implements PlayerStrategy {
         results.add(lastResult);
     }
 
-    public boolean getAction(){return false;}
+    public Xula clone(){
+        return this.clone();
+    }
+
+    public boolean getAction(){
+        return false;
+    }
 }

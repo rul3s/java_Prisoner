@@ -23,13 +23,13 @@ public class Register {
     public PlayerStrategy getStrategyCopy(String strat){
         switch (strat){
             case "xula":
-                return xula;
+                return xula.clone();
             case "candida":
-                return candida;
+                return candida.clone();
             case "random":
-                return random;
+                return random.clone();
             default:
-                return intellJ;
+                return intellJ.clone();
         }
     }
 }

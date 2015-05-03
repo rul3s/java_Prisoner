@@ -7,4 +7,5 @@ public interface PlayerStrategy {
     ArrayList<Boolean> results = new ArrayList<Boolean>();
     public boolean getAction();
     public void addResult(boolean lastResult);
+    public PlayerStrategy clone();
 }
